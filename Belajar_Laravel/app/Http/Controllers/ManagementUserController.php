@@ -44,5 +44,3 @@ class ManagementUserController extends Controller
       
 }
 
-
-?>
