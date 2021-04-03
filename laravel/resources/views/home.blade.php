@@ -6,5 +6,12 @@
             <h1 class="display-4">Halaman Home</h1>
             <p class="lead">Halaman ini merupakan halaman Home</p>
         </div>
+        <p>Nama : {{ $nama }}</p>
+        <p>NIM : {{ $nim }}</p>
+        <p>Mata Pelajaran</p>
+        <ul>
+            @foreach ($pelajaran as $p)
+            <li>{{ $p }}</li>
+            @endforeach
     </div>
 @endsection
