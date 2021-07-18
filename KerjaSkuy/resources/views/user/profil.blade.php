@@ -9,6 +9,10 @@
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan nama">
   </div>
   <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan email">
+  </div>
+  <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
     <input type="date" class="form-control" id="exampleFormControlInput1">
   </div>
@@ -16,6 +20,11 @@
     <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
     <p><input type='radio' name='jenis_kelamin' value='pria' />Pria</p>
     <p><input type='radio' name='jenis_kelamin' value='perempuan' />Perempuan</p>
+  </div>
+  <div>
+    <label for="exampleFormControlInput1" class="form-label">Pendidikan Terakhir</label>
+    <p><input type='radio' name='pendidikan_terakhir' value='SD' />SD</p>
+    <p><input type='radio' name='pendidikan_terakhir' value='SMP' />SMP</p>
   </div>
   <div>
     <label for="">Ganti Password</label>

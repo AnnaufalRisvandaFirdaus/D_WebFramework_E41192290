@@ -8,6 +8,7 @@ use App\Http\Controllers\PerusahaanController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\ContenController;
 use App\Http\Controllers\KerjaController;
+use App\Http\Controllers\ProfilController;
 use App\Models\conten;
 use App\Models\PerusahaanModel;
 
@@ -57,12 +58,12 @@ Route::get('/delete-user/{id}', 'PenggunaController@destroy')->name('delete-user
 // Route::view('/kategori', 'admin.kategori');
 
 // admin
-Route::get('/perusahaan', 'kerjaController@index')->name('perusahaan');
-Route::get('/tambah','KerjaController@create')->name('tambah');
-Route::post('/simpan','KerjaController@store')->name('simpan');
-Route::get('/edit/{id}', 'KerjaController@edit')->name('edit');
-Route::post('/update/{id}', 'KerjaController@update')->name('update');
-Route::get('/delete/{id}', 'KerjaController@destroy')->name('delete');
+// Route::get('/perusahaan', 'kerjaController@index')->name('perusahaan');
+// Route::get('/tambah','KerjaController@create')->name('tambah');
+// Route::post('/simpan','KerjaController@store')->name('simpan');
+// Route::get('/edit/{id}', 'KerjaController@edit')->name('edit');
+// Route::post('/update/{id}', 'KerjaController@update')->name('update');
+// Route::get('/delete/{id}', 'KerjaController@destroy')->name('delete');
 // Route::post('/simpan', [KerjaController::class, 'store']);
 
 // Route::get('/tambah', 'KerjaController@create')->name('tambah');
@@ -81,18 +82,16 @@ Auth::routes();
 
 // // Route untuk pembagian Login admin
 Route::group(['middleware' => ['auth', 'CekLevel:admin']], function () {
-    //     Route::view('/dashboard', 'admin.dashboard');
-    //     Route::view('/pekerjaan', 'admin.pekerjaan');
-    //     Route::view('/perusahaan', 'admin.perusahaan');
-    //     Route::view('/pengguna', 'admin.pengguna');
-    //     Route::view('/kategori', 'admin.kategori');
+// admin
+Route::get('/perusahaan', 'kerjaController@index')->name('perusahaan');
+Route::get('/tambah','KerjaController@create')->name('tambah');
+Route::post('/simpan','KerjaController@store')->name('simpan');
+Route::get('/edit/{id}', 'KerjaController@edit')->name('edit');
+Route::post('/update/{id}', 'KerjaController@update')->name('update');
+Route::get('/delete/{id}', 'KerjaController@destroy')->name('delete');
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 });
 
-// // Route untuk pembagian Login user
-// Route::group(['middleware' => ['auth', 'CekLevel:user']], function () {
-//     Route::view('/content', 'user.pencarian');
-//     Route::view('/tips', 'user.tips');
-//     Route::view('/profil', 'user.profil');
-// Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
-// });
+// Route untuk pembagian Login user
+    Route::view('/tips', 'user.tips');
+    Route::get('/profil', [ProfilController::class, 'index'])->name('profil');

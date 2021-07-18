@@ -15,13 +15,13 @@ class Perusahaan extends Migration
     {
         Schema::create('perusahaan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_perusahaan')->unique();;
-            $table->string('pekerjaan');
-            $table->string('gaji');
+            $table->string('nama_perusahaan')->nullable();
+            $table->string('pekerjaan')->nullable();
+            $table->string('gaji')->nullable();
             $table->string('alamat_perusahaan')->nullable();
-            $table->string('syarat_ketentuan');
-            $table->string('kontak');
-            $table->string('foto_perusahaan');
+            $table->string('syarat_ketentuan')->nullable();
+            $table->string('kontak')->nullable();
+            $table->string('foto_perusahaan')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });    }
