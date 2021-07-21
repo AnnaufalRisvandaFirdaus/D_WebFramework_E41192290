@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>KerjaSkuy | Registrasi</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -25,7 +25,7 @@
 
         <div class="card">
             <div class="card-body register-card-body">
-                <p class="login-box-msg">Daftar Anjing daripada Nganggur</p>
+                <p class="login-box-msg">Segera Daftarkan dirimu daripada Menganggur!</p>
 
                 <form method="POST" action="{{ route('register') }}" >
                     @csrf
@@ -92,13 +92,13 @@
                             <div class="icheck-primary">
                                 <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                                 <label for="agreeTerms">
-                                    I agree to the <a href="#">terms</a>
+                                    Saya Setuju<a href="#">Syarat dan Ketentuan</a>
                                 </label>
                             </div>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                         <button type="submit" class="btn btn-primary btn-block">Register</button>
+                         <button type="submit" class="btn btn-primary btn-block">Registrasi</button>
                         </div>
                         <!-- /.col -->
                     </div>

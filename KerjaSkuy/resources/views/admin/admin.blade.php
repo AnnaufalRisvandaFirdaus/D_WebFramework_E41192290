@@ -26,10 +26,10 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/" class="nav-link">Home</a>
+                    <a href="/#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/" class="nav-link">@yield('title')</a>
+                    <a href="#" class="nav-link">@yield('title')</a>
                 </li>
             </ul>
 
@@ -92,7 +92,7 @@
                     </div>
                     <div class="info" style="text-transform: capitalize; color:aliceblue;">
                         <a href="/profil" class="capitalize"></a>
-                        <h1>Admin</h1>
+                        <h5>Admin</h5>
                     </div>
                 </div>
 

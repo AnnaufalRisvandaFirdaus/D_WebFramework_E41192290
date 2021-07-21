@@ -14,7 +14,7 @@
             <form method="post" action="{{route('simpan')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label class="control-label" for="nama_perusahaan">Nama Perusahaan</label>
+                    <label class="control-label" for="nama_perusahaan">Nama Perusahaan :</label>
                     <input type="text" id="nama_perusahaan" name="nama_perusahaan" placeholder="nama perusahaan" class="form-control
                 @error('nama_perusahaan')
                 is-invalid @enderror" autofoucus>
@@ -24,17 +24,19 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="pekerjaan">Pekerjaan</label>
-                    <input type="text" id="pekerjaan" name="pekerjaan" placeholder="pekerjaan" class="form-control
-                  @error('pekerjaan')
-                  is-invalid @enderror" autofoucus>
+                    <label class="control-label" for="pekerjaan">Pekerjaan :</label>
+                    <textarea id="pekerjaan" name="pekerjaan" placeholder="Pekerjaan"
+                        class="form-control
+                              @error('pekerjaan')
+                              is-invalid @enderror" autofoucus>
                     @error('pekerjaan')
                     <div class="invalid-feedback">{{ $message}}</div>
                     @enderror
+                </textarea>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="gaji">Gaji</label>
+                    <label class="control-label" for="gaji">Gaji :</label>
                     <input type="text" id="gaji" name="gaji" placeholder="gaji" class="form-control
                       @error('gaji')
                       is-invalid @enderror" autofoucus>
@@ -44,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="alamat_perusahaan">Alamat Perusahaan</label>
+                    <label class="control-label" for="alamat_perusahaan">Alamat Perusahaan :</label>
                     <input type="text" id="alamat_perusahaan" name="alamat_perusahaan" placeholder="alamat_perusahaan"
                         class="form-control
                           @error('alamat_perusahaan')
@@ -55,18 +57,19 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="syarat_ketentuan">Syarat dan Ketentuan</label>
-                    <input type="text" id="syarat_ketentuan" name="syarat_ketentuan" placeholder="syarat_ketentuan"
+                    <label class="control-label" for="syarat_ketentuan">Syarat dan Ketentuan :</label>
+                    <textarea id="syarat_ketentuan" name="syarat_ketentuan" placeholder="syarat dan ketentuan"
                         class="form-control
                               @error('syarat_ketentuan')
                               is-invalid @enderror" autofoucus>
                     @error('syarat_ketentuan')
                     <div class="invalid-feedback">{{ $message}}</div>
                     @enderror
+                </textarea>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="kontak">Kontak</label>
+                    <label class="control-label" for="kontak">Kontak :</label>
                     <input type="text" id="kontak" name="kontak" placeholder="kontak" class="form-control
                                   @error('kontak')
                                   is-invalid @enderror" autofoucus>
@@ -76,7 +79,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="foto_perusahaan">Foto Perusahaan</label>
+                    <label class="control-label" for="foto_perusahaan">Foto Perusahaan :</label>
                     <input type="file" id="foto_perusahaan" name="foto_perusahaan" class="form-control @error('foto_perusahaan')
                 is-invalid @enderror" autofoucus>
                     @error('foto_perusahaan')

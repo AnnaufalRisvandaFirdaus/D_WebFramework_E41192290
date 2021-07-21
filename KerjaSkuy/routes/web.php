@@ -93,5 +93,5 @@ Route::get('/delete/{id}', 'KerjaController@destroy')->name('delete');
 });
 
 // Route untuk pembagian Login user
-    Route::view('/tips', 'user.tips');
+Route::get('/search', [HomeController::class, 'search'])->name('search');
     Route::get('/profil', [ProfilController::class, 'index'])->name('profil');

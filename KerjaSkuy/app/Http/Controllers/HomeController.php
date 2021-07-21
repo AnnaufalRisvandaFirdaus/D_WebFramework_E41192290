@@ -25,6 +25,13 @@ class HomeController extends Controller
     public function index()
     {
         $conten = Conten::all();
-        return view('user/content', compact('conten'));
+        return view('user.content', compact('conten'));
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $users = User::where('name', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('user.content', compact('conten'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }
